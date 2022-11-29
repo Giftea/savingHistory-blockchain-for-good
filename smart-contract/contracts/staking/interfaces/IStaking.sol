@@ -2,6 +2,8 @@
 pragma solidity 0.8.4;
 
 import {IERC20Upgradeable as IERC20} from "@openzeppelin/contracts-upgradeable/token/ERC20/IERC20Upgradeable.sol";
+import "../../donation/interfaces/IDonationMiner.sol";
+import "../../externalInterfaces/openzeppelin/IMintableERC20.sol";
 
 interface IStaking {
     struct Unstake {
@@ -18,6 +20,8 @@ interface IStaking {
     function getVersion() external pure returns(uint256);
     function updateCooldown(uint256 _newCooldown) external;
     function SAVEH() external view returns (IERC20);
+    function SSAVEH() external view returns (IMintableERC20);
+    function donationMiner() external view returns (IDonationMiner);
     function cooldown() external view returns(uint256);
     function currentTotalAmount() external view returns(uint256);
     function stakeholderAmount(address _holderAddress) external view returns(uint256);
