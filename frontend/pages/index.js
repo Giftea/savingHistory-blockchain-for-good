@@ -1,9 +1,17 @@
-import React from 'react'
+import Features from "../components/Features";
+import FuturePlan from "../components/HomePage/Future-Plan";
+import Hero from "../components/HomePage/Hero";
+import Newsletter from "../components/Newsletter";
+import Stats from "../components/HomePage/Stats";
 
-const Home = () => {
+export default function Home() {
   return (
-    <div>Home</div>
-  )
+    <>
+      <Hero />
+      <Features />
+      <Stats />
+      <FuturePlan />
+      <Newsletter />
+    </>
+  );
 }
-
-export default Home
