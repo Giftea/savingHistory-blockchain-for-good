@@ -1,7 +1,10 @@
 import React from "react";
 import { heroText } from "../../../data";
+import DonateModal from "../Donations";
+import { useDisclosure } from "@chakra-ui/react";
 
 const Hero = () => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
     <div className="bg-ash py-8 px-5 md:px-10 lg:px-14 md:flex justify-between items-center">
@@ -18,6 +21,7 @@ const Hero = () => {
       <div className="px-5 mt-10 md:mt-0">
         <img src="/images/Hero/Image.png" width={600} height={580} />
       </div>
+      <DonateModal isOpen={isOpen} onClose={onClose} />
     </div>
   );
 };
