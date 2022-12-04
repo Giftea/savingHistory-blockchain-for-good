@@ -6,7 +6,7 @@ Built for the Polygon Africa Bootcamp. 🚀🌍
 
 https://www.loom.com/share/cc053291c43d460793ab37f12fbf0a69
 
-## Important Note
+# Important Note
 
 Please send me an email with your wallet address, so I can transfer some test USDC tokens and SAVEH test tokens. 🙏🏽
 
