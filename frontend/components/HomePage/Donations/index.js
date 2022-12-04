@@ -48,7 +48,18 @@ const Donate = ({ isOpen, onClose }) => {
 
   const approveUSDC = async (e) => {
     e.preventDefault();
-    if (value > usdcBalance)
+    console.log(Number(value) > Number(usdcBalance));
+    if (!address) {
+      onClose();
+      return toast({
+        title: "Please connect wallet",
+        status: "error",
+        position: "top",
+        duration: 9000,
+        isClosable: true,
+      });
+    }
+    if (Number(value) > Number(usdcBalance)) {
       return toast({
         title: "Insufficient USDC balance",
         status: "error",
@@ -56,6 +67,7 @@ const Donate = ({ isOpen, onClose }) => {
         duration: 9000,
         isClosable: true,
       });
+    }
 
     try {
       const approveDonation = await tokenContract.approve(
@@ -64,7 +76,12 @@ const Donate = ({ isOpen, onClose }) => {
         { gasLimit: 900000 }
       );
 
-      approveDonation &&
+      setLoading(true);
+
+      const done = await approveDonation.wait();
+
+      console.log(done);
+      done &&
         toast({
           title: `${value} USDC approved!`,
           status: "success",
@@ -72,10 +89,14 @@ const Donate = ({ isOpen, onClose }) => {
           duration: 9000,
           isClosable: true,
         });
+
+      setLoading(false);
+
+      setStep(2);
     } catch (error) {
-      console.log(error);
+      console.log("Approval error: ", error);
+      onClose();
     }
-    setStep(2);
   };
 
   const handleSubmit = async (e) => {
@@ -85,13 +106,14 @@ const Donate = ({ isOpen, onClose }) => {
     const res = await donationMinerContract.donate(
       "0xb96E918488e0690ea2BCEF6C5B394bb32249f016",
       ethers.utils.parseEther(value.toString()),
-      address,
-      { gasLimit: 900000 }
+      address
     );
     setLoading(true);
     res
       .wait()
-      .then(() => {
+      .then((res) => {
+        console.log("Donation ok: ", res);
+
         setLoading(false);
         toast({
           title: `Your donation of ${value} USDC was successful. Thank you!`,
@@ -104,6 +126,8 @@ const Donate = ({ isOpen, onClose }) => {
         router.push("/farming");
       })
       .catch((err) => {
+        console.log("Donation error: ", err);
+
         toast({
           title: "An error occured",
           status: "error",
@@ -111,8 +135,10 @@ const Donate = ({ isOpen, onClose }) => {
           duration: 9000,
           isClosable: true,
         });
+        onClose();
+        setStep(1);
+        setValue();
       });
-    console.log(res);
   };
 
   return (
@@ -141,7 +167,9 @@ const Donate = ({ isOpen, onClose }) => {
                   <img src="/images/Other/usdc.png " height={20} width={20} />
                   <p className="text-sm">
                     Available Balance:{" "}
-                    <span className="font-bold">{usdcBalance} USDC</span>
+                    <span className="font-bold">
+                      {Number(usdcBalance).toFixed(2)} USDC
+                    </span>
                   </p>
                 </div>
                 <Input
@@ -161,7 +189,7 @@ const Donate = ({ isOpen, onClose }) => {
                       onClick={(e) => approveUSDC(e)}
                       className={`bg-primary text-sm py-4 px-5 rounded-3xl w-full`}
                     >
-                      Approve USDC
+                      {loading ? <Spinner /> : " Approve USDC"}
                     </button>
                   ) : step === 2 ? (
                     <button
