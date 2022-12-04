@@ -1,11 +1,21 @@
 # [savingHistory](https://savinghistory.xyz)
 Built for the Polygon Africa Bootcamp. 🚀🌍
 
+# Demo link (Please watch)
+https://www.loom.com/share/cc053291c43d460793ab37f12fbf0a69
+
 # Tech Stack
 - Solidity
+- Hardhat
+- Solhint
+- OpenZeppelin Library
+- Polygon MUmbai
 - Nextjs/Reactjs
+- Prettier
 - Openzepplin
 - Wagmi, Rainbowkit, ethers
+- Ethereum ENS
+- Discourse Community 
 
 # Product Description (Use of Product)
 Every culture on the planet provides its own answer to the big question, of "**What is it to be human?**" They form our repertoire for dealing with the challenges facing us as a species in the millennia ahead. As a result, the loss of any culture affects humanity.
