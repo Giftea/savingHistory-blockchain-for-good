@@ -24,6 +24,14 @@ Every culture on the planet provides its own answer to the big question, of "**W
 
 **savingHistory** mission is to preserve endangered cultures around the world by <u>documenting history, beliefs, customs, and social behavior in the form of articles, images, audio, and video</u>. As a result, an online museum for endangered minority cultures is being created.
 
+## How does it work?
+
+People who wish to support the protocol can donate USDC to the protocol's treasury, After donating successfully, they will receive some SAVEH tokens, which they can claim after an epoch (24 hours). They automatically become DAO members, and they can stake SAVEH tokens to receive SSAVEH tokens (stakeSAVEH). The SSAVEH token is the governance tool, which they can use to vote within the community.
+
+Curators and volunteers who wish to document an endangered culture within their environment can open a proposal on the community forum. Within 7 days, community members will agree if the open proposal should be approved. If approved, the curator can proceed to the protocol snapshot to create an official proposal. To create this official proposal, the curator needs to have at least 1% of the circulating SAVEH token.
+
+Community members who had SSAVEH token at the time the proposal was created, can go ahead and vote "YAY" or "NAY." If the "YAYs" have it, the curator can go ahead to document the endangered culture of interest. The culture's heritage will be documented in the "Histories" section of the community forum. Within 7 days, community members will scrutinize the submission to make sure the information is accurate, as it will be stored on IPFS permanently. After 7 days, the heritage will be uploaded to IPFS and the curator will be rewarded from the protocol's treasury.
+
 ### Step 1
 
 Create a Proposal following a template on https://community.savinghistory.xyz under proposal category, accept comment and feedback for the next 7 days. Wait for approval from administrator to proceed to next step. Administrator can be any of our initial committe members.
