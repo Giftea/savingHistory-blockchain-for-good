@@ -22,7 +22,7 @@ Email - **eleojogiftuhiene@gmail.com**
 - Nextjs/Reactjs
 - Prettier
 - Openzepplin
-- Wagmi, Rainbowkit, ethers
+- Wagmi, Rainbowkit, ethersjs
 - Ethereum ENS
 - Discourse Community
 - Tailwind CSS Library
