@@ -36,7 +36,7 @@ Every culture on the planet provides its own answer to the big question, of "**W
 
 **savingHistory** mission is to preserve endangered cultures around the world by <u>documenting history, beliefs, customs, and social behavior in the form of articles, images, audio, and video</u>. As a result, an online museum for endangered minority cultures is being created.
 
-## Product Description
+# Product Description
 
 People who wish to support the protocol can donate **USDC** to the protocol's treasury. After donating successfully, they will receive some **SAVEH** tokens, which they can claim after an epoch (24 hours). They automatically become DAO members, and they can stake SAVEH tokens to receive **SSAVEH** tokens (stakeSAVEH). The SSAVEH token is the governance tool, which they can use to vote within the community.
 
