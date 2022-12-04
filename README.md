@@ -2,7 +2,7 @@
 
 Built for the Polygon Africa Bootcamp. 🚀🌍
 
-# Demo link (Please watch)
+# Demo video link (Please watch)
 
 https://www.loom.com/share/cc053291c43d460793ab37f12fbf0a69
 
