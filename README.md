@@ -1,4 +1,4 @@
-# [savingHistory LIVE LINK](https://saving-history.vercel.app/)
+# [savingHistory LIVE LINK](https://savinghistory.xyz/)
 
 Built for the Polygon Africa Bootcamp. 🚀🌍
 
